@@ -264,6 +264,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5402893767702638865}
   - component: {fileID: 5402893767709597425}
+  - component: {fileID: 450902888526129073}
+  - component: {fileID: 6994904404030468837}
+  - component: {fileID: 680948814191515081}
   m_Layer: 0
   m_Name: Farmer
   m_TagString: Untagged
@@ -311,6 +314,47 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!54 &450902888526129073
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5402893767702342961}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &6994904404030468837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5402893767702342961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8284e14e5bebc5f0eafdf712c5a7e1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &680948814191515081
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5402893767702342961}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.93487, y: 3.056245, z: 0.6185249}
+  m_Center: {x: -0.0046521276, y: 1.5119449, z: 0.0046521425}
 --- !u!1 &5402893767702342965
 GameObject:
   m_ObjectHideFlags: 0

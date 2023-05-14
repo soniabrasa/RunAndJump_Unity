@@ -529,9 +529,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 450902888526129073, guid: 18d3091179d4a197f825959853f6ce87, type: 3}
+      propertyPath: m_Constraints
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 5402893767702342961, guid: 18d3091179d4a197f825959853f6ce87, type: 3}
       propertyPath: m_Name
-      value: Farmer
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5402893767702638865, guid: 18d3091179d4a197f825959853f6ce87, type: 3}
       propertyPath: m_RootOrder
@@ -577,5 +581,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6994904404030468837, guid: 18d3091179d4a197f825959853f6ce87, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 18d3091179d4a197f825959853f6ce87, type: 3}
+--- !u!1 &4913616464104013188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5402893767702342961, guid: 18d3091179d4a197f825959853f6ce87, type: 3}
+  m_PrefabInstance: {fileID: 1065738365153824949}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4913616464113520197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4913616464104013188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8284e14e5bebc5f0eafdf712c5a7e1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
