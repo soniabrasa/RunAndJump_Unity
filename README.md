@@ -24,3 +24,11 @@ Hay que tener en cuenta que la velocidad del movimiento hacia la izquierda que s
 El personaje deberá saltar al pulsar la barra espaciadora con una fuerza de impulso de valor 8, pero sólo si toca firme.
 
 Se aplican las físicas de Rigidbody.
+
+## Espaneo de obstáculos
+
+Crearemos un GameManager que se encargará de ir sembrando de obstáculos el camino de nuestro atlético granjero. Mediante una corrutina, se espaneará una barrera cada cierto tiempo elegido aleatoriamente entre 1 y 4 segundos.
+
+Lógicamente las barreras tienen que correr hacia la izquierda al mismo ritmo que el fondo de pantalla. Deberemos poder usar el mismo script que hemos usado para el fondo.
+
+Se establecerá un sistema de reciclado de barreras. Aquellas que superen un cierto punto en su movimiento hacia la izquierda, serán desactivas y colocadas en un pool a la espera de poder ser usadas de nuevo. Cuando se deba colocar una nueva barrera se comenzará por comprobar si hay alguna disponible en el pool de desactivadas y de ser así se usará una de ellas. En caso de no haber disponibles se espaneará una nueva.
