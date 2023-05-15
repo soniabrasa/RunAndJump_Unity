@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator CoSpawnBarrier()
     {
-        while (true)
+        while (!gameOver)
         {
             float seconds = 1f + Random.Range(0f, 3f);
 
