@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
         // Comprobando si hay alguna barrera en la lista
         if (barrierPool.Count > 0)
         {
-            // Reutilizando la primera barrera desactivada de la lista
+            // Reutilizando la primera barrera de la lista
             GameObject barrier = barrierPool[0];
 
             // Inicializando las físicas de espaneo
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
 
             barrier.SetActive(true);
 
-            // Eliminando la barrera de la lista de barreras inactivas
+            // Eliminando la primera barrera de la lista
             barrierPool.RemoveAt(0);
         }
 

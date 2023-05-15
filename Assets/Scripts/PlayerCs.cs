@@ -5,12 +5,14 @@ using UnityEngine;
 public class PlayerCs : MonoBehaviour
 {
     float jumpForce;
+    Animator animator;
     Rigidbody rb;
 
 
     void Start()
     {
         jumpForce = 8f;
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -31,6 +33,8 @@ public class PlayerCs : MonoBehaviour
 
         // Rigidbody.AddForce(Vector3 force, ForceMode mode = ForceMode.Force);
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+
+        animator.SetTrigger("Jump_trig");
     }
 
 
