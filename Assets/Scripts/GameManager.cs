@@ -12,8 +12,15 @@ public class GameManager : MonoBehaviour
     Vector3 barrierSpawnPoint;
 
     int totalBarriers;
+    bool gameOver;
 
-    void Awake() { instance = this; }
+    public bool GameOver { get { return gameOver; } }
+
+    void Awake()
+    {
+        instance = this;
+        gameOver = false;
+    }
 
 
     void Start()
@@ -73,13 +80,18 @@ public class GameManager : MonoBehaviour
         barrier.SetActive(false);
     }
 
+    public void SetGameOver()
+    {
+        gameOver = true;
+
+        Debug.Log("*** GAME OVER ***");
+    }
+
     IEnumerator CoSpawnBarrier()
     {
-        while (true)
+        while (!gameOver)
         {
             float seconds = 1f + Random.Range(0f, 3f);
-
-            Debug.Log($"{gameObject.name}.CoSpawnBarrier in {seconds} s.");
 
             yield return new WaitForSeconds(seconds);
 

@@ -15,6 +15,8 @@ public class RunToLeftCs : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.instance.GameOver) { return; }
+
         // En cada frame, transform.left * speed;
         transform.position -= transform.right * speed * Time.deltaTime;
     }
