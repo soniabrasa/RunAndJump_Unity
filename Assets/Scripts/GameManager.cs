@@ -12,8 +12,15 @@ public class GameManager : MonoBehaviour
     Vector3 barrierSpawnPoint;
 
     int totalBarriers;
+    bool gameOver;
 
-    void Awake() { instance = this; }
+    public bool GameOver { get { return gameOver; } }
+
+    void Awake()
+    {
+        instance = this;
+        gameOver = false;
+    }
 
 
     void Start()
@@ -71,6 +78,13 @@ public class GameManager : MonoBehaviour
 
         barrierPool.Add(barrier);
         barrier.SetActive(false);
+    }
+
+    public void SetGameOver()
+    {
+        gameOver = true;
+
+        Debug.Log("*** GAME OVER ***");
     }
 
     IEnumerator CoSpawnBarrier()

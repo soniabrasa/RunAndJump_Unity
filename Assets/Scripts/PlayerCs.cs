@@ -83,4 +83,14 @@ public class PlayerCs : MonoBehaviour
 
         return grounded;
     }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Barrier"))
+        {
+            Debug.Log($"{gameObject.name}.OnCollisionEnter({other.gameObject.name})");
+
+            GameManager.instance.SetGameOver();
+        }
+    }
 }
