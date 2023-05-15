@@ -19,6 +19,8 @@ public class PlayerCs : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.instance.GameOver) { return; }
+
         if (IsGrounded())
         {
             // El gameObject no se desplaza en X (movimiento infinito del escenario)

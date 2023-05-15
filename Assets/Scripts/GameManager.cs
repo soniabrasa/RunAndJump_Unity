@@ -93,8 +93,6 @@ public class GameManager : MonoBehaviour
         {
             float seconds = 1f + Random.Range(0f, 3f);
 
-            Debug.Log($"{gameObject.name}.CoSpawnBarrier in {seconds} s.");
-
             yield return new WaitForSeconds(seconds);
 
             SpawnBarrier();
