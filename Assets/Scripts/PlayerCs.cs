@@ -92,6 +92,14 @@ public class PlayerCs : MonoBehaviour
         {
             Debug.Log($"{gameObject.name}.OnCollisionEnter({other.gameObject.name})");
 
+            // Tipo de animación entre 1 y 2
+            int deathType = Random.Range(1, 3);
+
+            animator.SetInteger("DeahtType_int", deathType);
+            animator.SetBool("Death_b", true);
+
+            Debug.Log($"\t Death type {deathType}");
+
             GameManager.instance.SetGameOver();
         }
     }
