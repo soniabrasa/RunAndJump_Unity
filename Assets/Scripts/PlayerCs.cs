@@ -5,23 +5,41 @@ using UnityEngine;
 public class PlayerCs : MonoBehaviour
 {
     float jumpForce;
+    Animator animator;
     Rigidbody rb;
 
 
     void Start()
     {
         jumpForce = 8f;
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
 
 
     void Update()
     {
-        // El gameObject no se desplaza en X (movimiento infinito del escenario)
-
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (IsGrounded())
         {
-            Jump();
+            // El gameObject no se desplaza en X (movimiento infinito del escenario)
+
+            if (Input.GetButtonDown("Jump"))
+            {
+                Jump();
+                animator.SetTrigger("Jump_trig");
+            }
+
+            if (animator.GetBool("Jump_b"))
+            {
+                animator.SetBool("Jump_b", false);
+            }
+        }
+
+        // Rigidbodi Phsysics velocity
+        if (rb.velocity.y < 0)
+        {
+            animator.ResetTrigger("Jump_trig");
+            animator.SetBool("Jump_b", true);
         }
     }
 

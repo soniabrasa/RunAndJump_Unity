@@ -32,3 +32,13 @@ Crearemos un GameManager que se encargará de ir sembrando de obstáculos el cam
 Lógicamente las barreras tienen que correr hacia la izquierda al mismo ritmo que el fondo de pantalla. Deberemos poder usar el mismo script que hemos usado para el fondo.
 
 Se establecerá un sistema de reciclado de barreras. Aquellas que superen un cierto punto en su movimiento hacia la izquierda, serán desactivas y colocadas en un pool a la espera de poder ser usadas de nuevo. Cuando se deba colocar una nueva barrera se comenzará por comprobar si hay alguna disponible en el pool de desactivadas y de ser así se usará una de ellas. En caso de no haber disponibles se espaneará una nueva.
+
+## Animación del personaje
+
+El personaje del granjero lleva incorporado un animador que utilizaremos para darle vida. Este animador está controlado por numerosos parámetros, de los que a nosotros nos interesan solo algunos.
+
+Para empezar, y dado que el personaje siempre se moverá a velocidad constante, podemos establecer directamente en el animador un valor lo suficientemente alto del parámetro speed_f para que ejecute la animación de correr.
+
+Usaremos también jump_trig, y jump_b. El primero es un trigger y nos permitirá iniciar los saltos. El segundo es un booleano, asociado también a los saltos, y lo utilizaremos para hacer una transición desde el salto a una animación de caida y luego vuelta de nuevo a la animación de correr.
+
+También utilizaremos el parámetro death_type para seleccionar el tipo de animación de muerte que ejecutará el personaje.
